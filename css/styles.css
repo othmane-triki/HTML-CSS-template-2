@@ -1045,7 +1045,10 @@ header nav .form i {
     justify-content: space-between;
     position: relative;
     z-index: 2;
+    flex-wrap: wrap;
 }
+
+
 .subscribe .container .bar-section {
     display: flex;
     border: 1px solid white;
@@ -1071,8 +1074,17 @@ header nav .form i {
     flex-basis: 50%;
 }
 
-
-/* start subscribe */
+@media (max-width: 768px) {
+    .subscribe .container .text,
+    .subscribe .container .bar-section {
+        flex-basis: 100%;
+    }
+    .subscribe .container .text {
+        margin-top: 20px;
+        text-align: center;
+    }
+}
+/* end subscribe */
 
 /* start contact  */
 .contact  {
@@ -1082,6 +1094,7 @@ header nav .form i {
 .contact .content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .contact .content .contact-info {
@@ -1090,6 +1103,8 @@ header nav .form i {
     flex-basis: 65%;
     position: relative;
 }
+
+
 .contact .content .contact-info input:not(:last-child),
 .contact .content .contact-info textarea {
     padding: 20px;
@@ -1113,7 +1128,17 @@ header nav .form i {
 .contact .info {
     flex-basis: 30%;
 }
+@media (max-width: 768px) {
+    .contact .info {
+        flex-basis: 100%;
+        margin-top: 92px;
+        text-align: center;
+    }
 
+    .contact .content .contact-info {
+        flex-basis: 100%;
+    }
+}
 .contact .info h3 {
     font-size: 1.5rem;
     font-weight: normal;
